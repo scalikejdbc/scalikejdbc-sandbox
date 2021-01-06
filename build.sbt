@@ -35,7 +35,7 @@ DB localTx { implicit session =>
     ).foreach(sql => applyUpdate(sql))
   } catch { case e: Exception => e.printStackTrace }
 }
-GlobalSettings.loggingSQLAndTime = LoggingSQLAndTimeSettings(enabled = true, logLevel = 'info)
+GlobalSettings.loggingSQLAndTime = LoggingSQLAndTimeSettings(enabled = true, logLevel = Symbol("info"))
 implicit val session = AutoSession
 val (u, g, gm, c) = (User.syntax("u"), Group.syntax("g"), GroupMember.syntax("gm"), Company.syntax("c"))
 """
