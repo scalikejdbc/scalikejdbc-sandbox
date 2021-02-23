@@ -1,6 +1,6 @@
 enablePlugins(ScalikejdbcPlugin)
 
-scalaVersion := "2.13.4"
+scalaVersion := "2.13.5"
 lazy val scalikejdbcVersion = scalikejdbc.ScalikejdbcBuildInfo.version
 resolvers ++= Seq(
   "Sonatype snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
