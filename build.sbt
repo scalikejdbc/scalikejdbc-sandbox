@@ -36,6 +36,6 @@ DB localTx { implicit session =>
   } catch { case e: Exception => e.printStackTrace }
 }
 GlobalSettings.loggingSQLAndTime = LoggingSQLAndTimeSettings(enabled = true, logLevel = Symbol("info"))
-implicit val session = AutoSession
+implicit val session: DBSession = AutoSession
 val (u, g, gm, c) = (User.syntax("u"), Group.syntax("g"), GroupMember.syntax("gm"), Company.syntax("c"))
 """
