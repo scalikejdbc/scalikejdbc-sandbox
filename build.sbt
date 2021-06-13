@@ -1,6 +1,8 @@
 enablePlugins(ScalikejdbcPlugin)
 
-scalaVersion := "2.13.6"
+def Scala213 = "2.13.6"
+scalaVersion := Scala213
+crossScalaVersions := Seq("3.0.1-RC1", Scala213)
 lazy val scalikejdbcVersion = scalikejdbc.ScalikejdbcBuildInfo.version
 resolvers ++= Seq(
   "Sonatype snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
@@ -35,7 +37,7 @@ DB localTx { implicit session =>
     ).foreach(sql => applyUpdate(sql))
   } catch { case e: Exception => e.printStackTrace }
 }
-GlobalSettings.loggingSQLAndTime = LoggingSQLAndTimeSettings(enabled = true, logLevel = Symbol("info"))
+GlobalSettings.loggingSQLAndTime = LoggingSQLAndTimeSettings(enabled = true, logLevel = "info")
 implicit val session: DBSession = AutoSession
 val (u, g, gm, c) = (User.syntax("u"), Group.syntax("g"), GroupMember.syntax("gm"), Company.syntax("c"))
 """
