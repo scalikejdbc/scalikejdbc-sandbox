@@ -1,6 +1,6 @@
 enablePlugins(ScalikejdbcPlugin)
 
-def Scala213 = "2.13.10"
+def Scala213 = "2.13.11"
 scalaVersion := Scala213
 crossScalaVersions := Seq("3.3.0", Scala213)
 lazy val scalikejdbcVersion = scalikejdbc.ScalikejdbcBuildInfo.version
