@@ -2,7 +2,7 @@ enablePlugins(ScalikejdbcPlugin)
 
 def Scala213 = "2.13.14"
 scalaVersion := Scala213
-crossScalaVersions := Seq("3.4.1", Scala213)
+crossScalaVersions := Seq("3.4.2", Scala213)
 lazy val scalikejdbcVersion = scalikejdbc.ScalikejdbcBuildInfo.version
 resolvers ++= Seq(
   "Sonatype snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
