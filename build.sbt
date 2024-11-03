@@ -12,7 +12,7 @@ libraryDependencies ++= Seq(
   "org.scalikejdbc"    %% "scalikejdbc-test"   % scalikejdbcVersion,
   "org.slf4j"          %  "slf4j-simple"       % "1.7.+",
   "org.hibernate"      %  "hibernate-core"     % "6.6.1.Final",
-  "org.hsqldb"         %  "hsqldb"             % "2.7.3"
+  "org.hsqldb"         %  "hsqldb"             % "2.7.4"
 )
 initialCommands := """import scalikejdbc._
 import java.time._
