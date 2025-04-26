@@ -4,9 +4,6 @@ def Scala213 = "2.13.16"
 scalaVersion := Scala213
 crossScalaVersions := Seq("3.6.4", Scala213)
 lazy val scalikejdbcVersion = scalikejdbc.ScalikejdbcBuildInfo.version
-resolvers ++= Seq(
-  "Sonatype snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
-)
 libraryDependencies ++= Seq(
   "org.scalikejdbc"    %% "scalikejdbc"        % scalikejdbcVersion,
   "org.scalikejdbc"    %% "scalikejdbc-test"   % scalikejdbcVersion,
